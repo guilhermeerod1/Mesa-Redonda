@@ -87,3 +87,12 @@ END;/
 _______________________________________________________________________________
 
 CREATE SEQUENCE seq_servico increment by 1 start with 1
+
+CREATE TABLE PRODUTO(
+
+idProduto INTEGER not null,
+nomeProduto VARCHAR(50) not null,
+preco NUMBER not null,
+descricaoProduto clob not null
+
+);
