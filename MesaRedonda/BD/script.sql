@@ -68,3 +68,22 @@ nomeServico VARCHAR(30) not null,
 precoServico NUMBER not null,
 descricaoServico clob not null
 );
+PROCEDURE atualizaServico (sid Servico.ID%type, snome Servico.Nome%type, spreco Servico%type, sdescricao Servico.Descricao%type ) IS
+
+BEGIN
+     update Servico set Nome=snome, Preco=spreco, Descricao=sdescricao WHERE id = sid;
+END;/
+
+PROCEDURE insereServico (snome Servico.Nome%type, spreco Servico%type, sdescricao Servico.Descricao%type ) IS
+BEGIN
+     insert into Servico(idServico, nomeServico, precoServico, descricaoServico) values(Seq_Servico.nextval, snome, spreco, sdescricao);
+END;/
+
+PROCEDURE removeServico (idServico Servico.ID%type) IS
+
+BEGIN
+     delete from Servico where id = idServico;
+END;/
+_______________________________________________________________________________
+
+CREATE SEQUENCE seq_servico increment by 1 start with 1
