@@ -96,3 +96,23 @@ preco NUMBER not null,
 descricaoProduto clob not null
 
 );
+
+CREATE SEQUENCE seq_produto increment by 1 start with 1
+
+_______________________________________________________________________________
+
+PROCEDURE atualizaProduto (pid Servico.ID%type, pnome Servico.Nome%type, ppreco Servico%type, pdescricao Servico.Descricao%type ) IS
+BEGIN
+     update Produto set Nome=pnome, Preco=ppreco, Descricao=pdescricao WHERE id = pid;
+END;/
+
+PROCEDURE insereProduto (pid Servico.ID%type, pnome Produto.Nome%type, ppreco Servico.Preco%type, pdescricao Produto.Descricao%type ) IS
+BEGIN
+     insert into Produto(idProduto, nomeProduto, precoProduto, descricaoProduto) values(Seq_Produto.nextval, pnome, ppreco, pdescricao);
+END;/
+
+PROCEDURE removeProduto (idProduto Produto.ID%type) IS
+
+BEGIN
+     delete from Produto where id = idProduto;
+END;/
