@@ -41,7 +41,7 @@ create or replace procedure InserirUsuario
 begin 
 	insert into Usuarios(IdUsuario, Nome, Senha, Tipo, Email, Telefone) 
 		values(Seq_Usuarios.nextval, cnome, csenha, ctipo, cemail, ctelefone);
-end;
+end;/
 
 create or replace procedure AtualizarUsuario
 (
@@ -54,9 +54,17 @@ create or replace procedure AtualizarUsuario
 ) is
 begin
 	update Usuarios set Nome = cnome, Senha = csenha, Tipo = ctipo, Email = cemail, Telefone = ctelefone where IdUsuario = id;
-end;
+end;/
 
 create or replace procedure DeletarUsuario(id Usuarios.IdUsuario%type) is
 begin
 	delete from Usuarios where IdUsuario = id;
-end;
+end;/
+
+CREATE TABLE Servico(
+
+idServico INTEGER not null,
+nomeServico VARCHAR(30) not null,
+precoServico NUMBER not null,
+descricaoServico clob not null
+);
