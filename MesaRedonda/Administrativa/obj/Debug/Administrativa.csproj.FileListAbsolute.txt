@@ -19,3 +19,7 @@ C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\Micr
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\obj\Debug\Administrativa.dll
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\obj\Debug\Administrativa.pdb
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\obj\Debug\Administrativa.csprojResolveAssemblyReference.cache
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DAL.dll
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DL.dll
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DAL.pdb
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DL.pdb

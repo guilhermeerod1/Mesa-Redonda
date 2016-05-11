@@ -23,18 +23,16 @@ namespace DAL
                 conexao.Open();
 
                 OracleCommand comando = new OracleCommand();
-
-                string[] colunas = { "@Nome", "@Senha", "@Tipo", "@Email", "@Telefone" };
-
+                
                 comando.Connection = conexao;
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.CommandText = "InserirUsuario(@Nome, @Senha, @Tipo, @Email, @Telefone)";
+                comando.CommandText = "InserirUsuario";
 
-                comando.Parameters.Add("@Nome", u.Nome);
-                comando.Parameters.Add("@Senha", u.Senha);
-                comando.Parameters.Add("@Tipo", u.Administrador ? "1" : "0");
-                comando.Parameters.Add("@Email", u.Email);
-                comando.Parameters.Add("@Telefone", u.Telefone);
+                comando.Parameters.Add("cnome", OracleDbType.Varchar2).Value = u.Nome;
+                comando.Parameters.Add("csenha", OracleDbType.Varchar2).Value = u.Senha;
+                comando.Parameters.Add("ctipo", OracleDbType.Char).Value = u.Administrador ? "1" : "0";
+                comando.Parameters.Add("cemail", OracleDbType.Varchar2).Value = u.Email;
+                comando.Parameters.Add("ctelefone", OracleDbType.Varchar2).Value = u.Telefone;
 
                 return comando.ExecuteNonQuery();
 
@@ -54,14 +52,14 @@ namespace DAL
 
                 comando.Connection = conexao;
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.CommandText = "AtualizarUsuario(@IdUsuario, @Nome, @Senha, @Tipo, @Email, @Telefone)";
+                comando.CommandText = "AtualizarUsuario";
 
-                comando.Parameters.Add("@IdUsuario", u.IdUsuario);
-                comando.Parameters.Add("@Nome", u.Nome);
-                comando.Parameters.Add("@Senha", u.Senha);
-                comando.Parameters.Add("@Tipo", u.Administrador ? "1" : "0");
-                comando.Parameters.Add("@Email", u.Email);
-                comando.Parameters.Add("@Telefone", u.Telefone);
+                comando.Parameters.Add("id", OracleDbType.Int32).Value = u.IdUsuario;
+                comando.Parameters.Add("cnome", OracleDbType.Varchar2).Value = u.Nome;
+                comando.Parameters.Add("csenha", OracleDbType.Varchar2).Value = u.Senha;
+                comando.Parameters.Add("ctipo", OracleDbType.Char).Value = u.Administrador ? "1" : "0";
+                comando.Parameters.Add("cemail", OracleDbType.Varchar2).Value = u.Email;
+                comando.Parameters.Add("ctelefone", OracleDbType.Varchar2).Value = u.Telefone;
 
                 return comando.ExecuteNonQuery();
 
@@ -81,9 +79,9 @@ namespace DAL
 
                 comando.Connection = conexao;
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.CommandText = "DeletarUsuario(@IdUsuario)";
+                comando.CommandText = "DeletarUsuario";
 
-                comando.Parameters.Add("@IdUsuario", id);
+                comando.Parameters.Add("id", OracleDbType.Int32).Value = id;
 
                 return comando.ExecuteNonQuery();
 
@@ -114,10 +112,10 @@ namespace DAL
                     {
                         Usuario u = new Usuario();
 
-                        u.IdUsuario = (int)reader["IdUsuario"];
+                        u.IdUsuario = Convert.ToInt32(reader["IdUsuario"]);
                         u.Nome = (string)reader["Nome"];
                         u.Senha = (string)reader["Senha"];
-                        u.Administrador = ((char)reader["Tipo"]) == '1';
+                        u.Administrador = ((string)reader["Tipo"]).Equals("1");
                         u.Email = (string)reader["Email"];
                         u.Telefone = (string)reader["Telefone"];
 
