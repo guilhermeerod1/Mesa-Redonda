@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Administrativa.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head runat="server">
+    <title></title>
+    <!-- include libraries(jQuery, bootstrap) -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+<!-- include summernote css/js-->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1>Mesa Redonda - Administrativo</h1>
+    <hr />
+    Usuários
+    <ul>
+        <li><a>Cadastrar novo usuário</a></li>
+        <li><a>Usuário cadastrados</a></li>
+    </ul>
+    <br />
+    Produtos
+    <ul>
+        <li><a>Cadastrar novo produto</a></li>
+        <li><a>Produtos cadastrados</a></li>
+    </ul>
+    <br />
+    Serviços
+    <ul>
+        <li><a>Cadastrar novo serviço</a></li>
+        <li><a>Serviços cadastrados</a></li>
+    </ul>
+    <hr />
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+</body>
+</html>
