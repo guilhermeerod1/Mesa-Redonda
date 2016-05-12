@@ -9,11 +9,11 @@ namespace DL
     public class Produto
     {
 
-        int IdProduto { get; set; }
-        string Nome { get; set; }
-        decimal Preco { get; set; }
-        string Descricao { get; set; }
-        //Imagem Imagem { get; set; }
+        public int IdProduto { get; set; }
+        public string Nome { get; set; }
+        public decimal Preco { get; set; }
+        public string Descricao { get; set; }
+        //public Imagem Imagem { get; set; }
 
     }
 }
