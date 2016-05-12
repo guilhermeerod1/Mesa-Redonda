@@ -30,14 +30,63 @@ create table Usuarios (
 	constraint PK_Usuario primary key (IdUsuario),
 	constraint UQ_Usuarios_Nome unique (Nome),
 	constraint UQ_Usuarios_Email unique (Email),
-	constraint CK_Tipo_01 check (Tipo = '0' or Tipo = '1')
+	constraint CK_Tipo_01 check (Tipo = '0' or Tipo = '1') -- 0: Padrao, 1:Admin.
 	
 );
 
-create sequence Seq_Usuarios increment by 1 start with 1; 
+create table Servicos (
 
-create or replace procedure InserirUsuario
-(cnome Usuarios.Nome%type, csenha Usuarios.Senha%type, ctipo Usuarios.Tipo%type, cemail Usuarios.Email%type, ctelefone Usuarios.Telefone%type) is
+	IdServico integer,
+	Nome varchar2(50) not null,
+	Preco number(18,2) not null,
+	Descricao clob not null,
+	IdImagem integer,
+
+	constraint PK_Servicos primary key (IdServico),
+	constraint FK_Servicos_Imagens foreign key (IdImagem) references Imagens(IdImagem)
+
+);
+
+create table Produtos (
+
+	IdProduto integer not null,
+	Nome varchar2(50) not null,
+	Preco number(18,2) not null,
+	Descricao clob not null,
+	IdImagem integer,
+
+	constraint PK_Produtos primary key (IdProduto),
+	constraint FK_Produtos_Imagens foreign key (IdImagem) references Imagens(IdImagem)
+
+);
+
+create table Imagens (
+	
+	IdImagem integer,
+	Caminho varchar2(255) not null,
+
+	constraint PK_Imagem primary key (IdImagem),
+	constraint UQ_Imagem_Caminho unique (Caminho)
+
+);
+
+--Sequences:
+create sequence Seq_Imagens increment by 1 start with 1;
+create sequence Seq_Produtos increment by 1 start with 1;
+create sequence Seq_Servicos increment by 1 start with 1;
+create sequence Seq_Usuarios increment by 1 start with 1;
+
+--Procedures:
+
+--Usuário
+
+create or replace procedure InserirUsuario (
+	cnome Usuarios.Nome%type, 
+	csenha Usuarios.Senha%type, 
+	ctipo Usuarios.Tipo%type, 
+	cemail Usuarios.Email%type, 
+	ctelefone Usuarios.Telefone%type
+) is
 begin 
 	insert into Usuarios(IdUsuario, Nome, Senha, Tipo, Email, Telefone) 
 		values(Seq_Usuarios.nextval, cnome, csenha, ctipo, cemail, ctelefone);
@@ -53,7 +102,13 @@ create or replace procedure AtualizarUsuario
 	ctelefone 	Usuarios.Telefone%type
 ) is
 begin
-	update Usuarios set Nome = cnome, Senha = csenha, Tipo = ctipo, Email = cemail, Telefone = ctelefone where IdUsuario = id;
+	update Usuarios set 
+		Nome = cnome, 
+		Senha = csenha, 
+		Tipo = ctipo, 
+		Email = cemail, 
+		Telefone = ctelefone 
+	where IdUsuario = id;
 end;/
 
 create or replace procedure DeletarUsuario(id Usuarios.IdUsuario%type) is
@@ -61,58 +116,79 @@ begin
 	delete from Usuarios where IdUsuario = id;
 end;/
 
-CREATE TABLE Servico(
+--Serviço
 
-idServico INTEGER not null,
-nomeServico VARCHAR(30) not null,
-precoServico NUMBER not null,
-descricaoServico clob not null
-);
-PROCEDURE atualizaServico (sid Servico.ID%type, snome Servico.Nome%type, spreco Servico%type, sdescricao Servico.Descricao%type ) IS
+create or replace procedure AtualizarServico (
+	id Servicos.IdServico%type, 
+	cnome Servicos.Nome%type, 
+	cpreco Servicos.Preco%type, 
+	cdescricao Servicos.Descricao%type 
+) is
+begin
+     update Servicos set Nome=cnome, Preco=cpreco, Descricao=cdescricao where idServico = id;
+end;/
 
-BEGIN
-     update Servico set Nome=snome, Preco=spreco, Descricao=sdescricao WHERE id = sid;
-END;/
+create or replace procedure InserirServico (
+	cnome Servicos.Nome%type, 
+	cpreco Servicos.Preco%type, 
+	cdescricao Servicos.Descricao%type 
+) is
+begin
+     insert into Servicos (IdServico, Nome, Preco, Descricao) 
+	 values (Seq_Servicos.nextval, cnome, cpreco, cdescricao);
+end;/
 
-PROCEDURE insereServico (snome Servico.Nome%type, spreco Servico%type, sdescricao Servico.Descricao%type ) IS
-BEGIN
-     insert into Servico(idServico, nomeServico, precoServico, descricaoServico) values(Seq_Servico.nextval, snome, spreco, sdescricao);
-END;/
+create or replace procedure RemoverServico (id Servicos.IdServico%type) is
+begin
+     delete from Servicos where idServico = id;
+end;/
 
-PROCEDURE removeServico (idServico Servico.ID%type) IS
+--Produto
 
-BEGIN
-     delete from Servico where id = idServico;
-END;/
-_______________________________________________________________________________
+create or replace procedure AtualizarProduto (
+	id Produtos.IdProduto%type, 
+	cnome Produtos.Nome%type, 
+	cpreco Produtos.Preco%type, 
+	cdescricao Produtos.Descricao%type, 
+	cIdImagem Produtos.IdImagem%type
+) is
+begin
+     update Produtos set Nome=cnome, Preco=cpreco, Descricao=cdescricao, IdImagem = cIdImagem where IdProduto = id;
+end;/
 
-CREATE SEQUENCE seq_servico increment by 1 start with 1
+create or replace procedure InserirProduto (
+	cnome Produtos.Nome%type, 
+	cpreco Produtos.Preco%type, 
+	cdescricao Produtos.Descricao%type,
+	cIdImagem Produtos.IdImagem%type
+) is
+begin
+     insert into Produtos(IdProduto, Nome, Preco, Descricao, IdImagem) 
+	 values(Seq_Produtos.nextval, cnome, cpreco, cdescricao, cIdImagem);
+end;/
 
-CREATE TABLE PRODUTO(
+create or replace procedure RemoverProduto (id Produtos.IdProduto%type) IS
+begin
+     delete from Produtos where IdProduto = id;
+end;/
 
-idProduto INTEGER not null,
-nomeProduto VARCHAR(50) not null,
-preco NUMBER not null,
-descricaoProduto clob not null
+--Imagem
 
-);
+create or replace procedure InserirImagem (ccaminho Imagens.Caminho%type) is
+begin
+	insert into Imagens(IdImagem, Caminho) values(Seq_Imagens.nextval, ccaminho);
+end;/
 
-CREATE SEQUENCE seq_produto increment by 1 start with 1
+create or replace procedure AtualizarImagem (id Imagens.IdImagem%type, ccaminho Imagem.Caminho%type) is
+begin
+	update Imagens set Caminho = ccaminho where IdImagem = id;
+end;/
 
-_______________________________________________________________________________
+create or replace procedure RemoverImagem (id Imagens.IdImagem%type) is
+begin
+	delete from Imagens where IdImagem = id;
+end;/
 
-PROCEDURE atualizaProduto (pid Servico.ID%type, pnome Servico.Nome%type, ppreco Servico%type, pdescricao Servico.Descricao%type ) IS
-BEGIN
-     update Produto set Nome=pnome, Preco=ppreco, Descricao=pdescricao WHERE id = pid;
-END;/
+--Inserts:
 
-PROCEDURE insereProduto (pid Servico.ID%type, pnome Produto.Nome%type, ppreco Servico.Preco%type, pdescricao Produto.Descricao%type ) IS
-BEGIN
-     insert into Produto(idProduto, nomeProduto, precoProduto, descricaoProduto) values(Seq_Produto.nextval, pnome, ppreco, pdescricao);
-END;/
-
-PROCEDURE removeProduto (idProduto Produto.ID%type) IS
-
-BEGIN
-     delete from Produto where id = idProduto;
-END;/
+execute InserirUsuario('Admin', 'Admin', '1', 'adsreges@gmail.com', '');

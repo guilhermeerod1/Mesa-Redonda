@@ -7,7 +7,9 @@
         <hr />
         Nome:<br />
         <asp:TextBox ID="txtNomeProduto" runat="server"></asp:TextBox><br />
-        Preço:<br />
+        Foto:<br />
+        <asp:FileUpload ID="FileUpload1" runat="server" />
+        Preço:<br />        
         <asp:TextBox ID="txtPrecoProduto" runat="server"></asp:TextBox><br />
         Descrição:<br />
         <div id="summernote"></div><br />
