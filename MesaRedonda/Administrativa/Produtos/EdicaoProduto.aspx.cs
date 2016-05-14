@@ -13,7 +13,15 @@ namespace Administrativa.Produtos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void AsyncFileUpload1_UploadedComplete(object sender, AjaxControlToolkit.AsyncFileUploadEventArgs e)
+        {
+            string nome = "~/Imagens/" + AsyncFileUpload1.FileName;
+            AsyncFileUpload1.SaveAs(Server.MapPath(nome));
+            Image1.ImageUrl = nome;
+            Image1.DataBind();
         }
     }
 }
