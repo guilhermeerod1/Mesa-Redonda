@@ -79,7 +79,7 @@ namespace DAL
 
                 conexao.Open();
 
-                string sql = "select IdImagem, Caminho from Imagem";
+                string sql = "select IdImagem, Caminho from Imagens";
 
                 using (OracleCommand comando = new OracleCommand(sql, conexao))
                 {
