@@ -23,3 +23,4 @@ C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DAL.
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DL.dll
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DAL.pdb
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\DL.pdb
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\Administrativa\bin\AjaxControlToolkit.dll
