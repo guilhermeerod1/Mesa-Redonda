@@ -34,6 +34,16 @@ create table Usuarios (
 	
 );
 
+create table Imagens (
+	
+	IdImagem integer,
+	Caminho varchar2(255) not null,
+
+	constraint PK_Imagem primary key (IdImagem),
+	constraint UQ_Imagem_Caminho unique (Caminho)
+
+);
+
 create table Servicos (
 
 	IdServico integer,
@@ -57,16 +67,6 @@ create table Produtos (
 
 	constraint PK_Produtos primary key (IdProduto),
 	constraint FK_Produtos_Imagens foreign key (IdImagem) references Imagens(IdImagem)
-
-);
-
-create table Imagens (
-	
-	IdImagem integer,
-	Caminho varchar2(255) not null,
-
-	constraint PK_Imagem primary key (IdImagem),
-	constraint UQ_Imagem_Caminho unique (Caminho)
 
 );
 
@@ -122,20 +122,22 @@ create or replace procedure AtualizarServico (
 	id Servicos.IdServico%type, 
 	cnome Servicos.Nome%type, 
 	cpreco Servicos.Preco%type, 
-	cdescricao Servicos.Descricao%type 
+	cdescricao Servicos.Descricao%type,
+	cIdImagem Servicos.IdImagem%type 
 ) is
 begin
-     update Servicos set Nome=cnome, Preco=cpreco, Descricao=cdescricao where idServico = id;
+     update Servicos set Nome=cnome, Preco=cpreco, Descricao=cdescricao, IdImagem = cIdImagem where idServico = id;
 end;/
 
 create or replace procedure InserirServico (
 	cnome Servicos.Nome%type, 
 	cpreco Servicos.Preco%type, 
-	cdescricao Servicos.Descricao%type 
+	cdescricao Servicos.Descricao%type,
+	cIdImagem Servicos.IdImagem%type
 ) is
 begin
-     insert into Servicos (IdServico, Nome, Preco, Descricao) 
-	 values (Seq_Servicos.nextval, cnome, cpreco, cdescricao);
+     insert into Servicos (IdServico, Nome, Preco, Descricao, IdImagem) 
+	 values (Seq_Servicos.nextval, cnome, cpreco, cdescricao, cIdImagem);
 end;/
 
 create or replace procedure RemoverServico (id Servicos.IdServico%type) is
