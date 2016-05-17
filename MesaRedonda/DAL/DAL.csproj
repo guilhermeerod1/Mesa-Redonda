@@ -45,10 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImagemDA.cs" />
-    <Compile Include="ProdutoDA.cs" />
+    <Compile Include="Daos\ImagemDA.cs" />
+    <Compile Include="Daos\ProdutoDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsuarioDA.cs" />
+    <Compile Include="Daos\ServicoDA.cs" />
+    <Compile Include="Daos\UsuarioDA.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DL\DL.csproj">
