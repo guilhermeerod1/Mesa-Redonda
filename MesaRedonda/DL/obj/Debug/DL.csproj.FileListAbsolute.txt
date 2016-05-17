@@ -3,3 +3,6 @@ C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DL\bin\Debug\DL.pdb
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DL\obj\Debug\DL.csprojResolveAssemblyReference.cache
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DL\obj\Debug\DL.dll
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DL\obj\Debug\DL.pdb
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DL\obj\Debug\DL.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DL\obj\Debug\DL.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DL\obj\Debug\DL.pdb

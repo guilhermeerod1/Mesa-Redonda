@@ -5,18 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Administrativa.Login
+namespace Administrativa.Default
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnSubmeter(object sender, EventArgs e)
+        protected void submitEventMethod(object sender, EventArgs e)
         {
-            // Aqui fara a busca do usuario por comandos? 
+
         }
     }
 }

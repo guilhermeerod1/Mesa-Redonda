@@ -7,3 +7,12 @@ C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DAL\bin\Debug\DL.pdb
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DAL\obj\Debug\DAL.dll
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\DAL\obj\Debug\DAL.pdb
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\bin\Debug\DAL.dll.config
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\bin\Debug\DAL.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\bin\Debug\DAL.pdb
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\bin\Debug\DL.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\bin\Debug\DL.pdb
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\obj\Debug\DAL.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\DAL\obj\Debug\DAL.pdb
