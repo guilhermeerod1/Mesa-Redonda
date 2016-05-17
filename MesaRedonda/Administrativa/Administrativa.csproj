@@ -74,6 +74,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default\Default.aspx" />
     <Content Include="Imagens\close.png" />
     <Content Include="Login\Login.aspx" />
     <Content Include="packages.config" />
@@ -93,6 +94,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
