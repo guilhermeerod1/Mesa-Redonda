@@ -193,4 +193,8 @@ end;/
 
 --Inserts:
 
-execute InserirUsuario('Admin', 'Admin', '1', 'adsreges@gmail.com', '');
+--Direto na linha de comandos:
+--execute InserirUsuario('Admin', 'Admin', '1', 'adsreges@gmail.com', '90909090');
+
+--Squirel:
+ --{call InserirUsuario('Admin', 'Admin', '1', 'adsreges@gmail.com', '90909090')}
