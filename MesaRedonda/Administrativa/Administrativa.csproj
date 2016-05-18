@@ -74,8 +74,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default\Default.aspx" />
-    <Content Include="Imagens\close.png" />
     <Content Include="Login\Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
@@ -89,18 +87,13 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Produtos\EdicaoProduto.aspx" />
+    <Content Include="Produtos\Produtos.aspx" />
+    <Content Include="Produtos\Scripts\produtosScript.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -125,11 +118,21 @@
     <Compile Include="Produtos\EdicaoProduto.aspx.designer.cs">
       <DependentUpon>EdicaoProduto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Produtos\Produtos.aspx.cs">
+      <DependentUpon>Produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Produtos\Produtos.aspx.designer.cs">
+      <DependentUpon>Produtos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Imagens\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Servicos\" />
+    <Folder Include="Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
