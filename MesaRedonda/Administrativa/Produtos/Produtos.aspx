@@ -9,7 +9,7 @@
         <asp:Label ID="lblNumeroProdutos" runat="server"></asp:Label>
     </div>
     <div>
-        <asp:Repeater ID="rptProdutos" runat="server">
+        <asp:Repeater ID="rptProdutos" runat="server" OnItemDataBound="rptProdutos_ItemDataBound">
             <ItemTemplate>
                 <div>
                     <div><asp:Label ID="lblIdProduto" runat="server"></asp:Label></div>
@@ -17,6 +17,10 @@
                     <div><asp:Label ID="lblPreco" runat="server"></asp:Label></div>
                     <div><asp:Image ID="imgFotoProduto" runat="server" /></div>
                     <div><asp:Label ID="lblDescricao" runat="server"></asp:Label></div>
+                    <div>
+                        <asp:HyperLink ID="lnkRemover" runat="server" Text="Remover" />
+                        <asp:HyperLink ID="lnkEditar" runat="server" Text="Editar" />
+                    </div>                    
                 </div>
             </ItemTemplate>
         </asp:Repeater>
