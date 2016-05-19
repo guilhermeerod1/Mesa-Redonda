@@ -16,7 +16,18 @@ namespace Administrativa.Login
 
         protected void btnSubmeter(object sender, EventArgs e)
         {
-            // Aqui fara a busca do usuario por comandos? 
+            var submeter = UsuarioBO.Submeter(txtUsuario.Text, txtSenha.Text);
+
+            if (submeter)
+            {
+                FormsAuthentication.RedirectFormLoginPage(txtUsuario.Text, false);
+                Response.Redirect("Default.aspx", true);
+            }
+
+            else
+            {
+                Response.Redirect("Login.aspx", true);
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Business
 {
-    class Login
+    public class Login
     {
     }
 }
