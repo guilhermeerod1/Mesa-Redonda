@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using System.Web.Security;
 
 namespace Administrativa.Login
 {
@@ -15,13 +16,13 @@ namespace Administrativa.Login
 
         }
 
-        protected void btnSubmeter(object sender, EventArgs e)
+        protected void btnSubmeter_OnClick(object sender, EventArgs e)
         {
-            var submeter = new UsuarioBO().Submeter(txtUsuario.Text, txtSenha.Text);
+            var submeter = new UsuarioBO().Submeter(usuarioTextBox.Text, senhaTextBox.Text);
 
             if (submeter)
             {
-                FormsAuthentication.RedirectFormLoginPage(txtUsuario.Text, false);
+                FormsAuthentication.RedirectFormLoginPage(usuarioTextBox.Text, false);
                 Response.Redirect("Default.aspx", true);
             }
 

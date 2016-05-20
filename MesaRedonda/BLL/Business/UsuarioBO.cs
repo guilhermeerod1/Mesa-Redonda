@@ -31,14 +31,12 @@ namespace BLL.Business
                 var usuario = this.usuario.buscar(nomeUsuario);
 
                 if(usuario == null)
-                {
                     return false;
-                }
 
                 if (!usuario.Senha.Trim().Equals(senha))
-                {
                     return false;
-                }
+
+                return true;
             }
 
             catch (Exception)
@@ -51,11 +49,13 @@ namespace BLL.Business
         {
             try
             {
-                return UsuarioDA.Buscar(id);
+                return usuario.buscar(id);
             }
 
-            catch (Exception) { 
-}
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public int Atualizar(Usuario u)
@@ -75,7 +75,7 @@ namespace BLL.Business
         {
             try
             {
-                return UsuarioDA.Remover(u);
+                return usuario.Remover(u.IdUsuario);
             }
 
             catch (Exception)
@@ -86,11 +86,11 @@ namespace BLL.Business
 
 
 
-        public static int List<Usuario> Listar()
+        public List<Usuario> Listar()
         {
             try
             {
-                return Usuario.Listar();
+                return usuario.listar();
             }
 
             catch (Exception)
