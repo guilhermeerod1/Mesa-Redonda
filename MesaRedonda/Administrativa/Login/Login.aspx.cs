@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BLL;
 
 namespace Administrativa.Login
 {
@@ -16,7 +17,7 @@ namespace Administrativa.Login
 
         protected void btnSubmeter(object sender, EventArgs e)
         {
-            var submeter = UsuarioBO.Submeter(txtUsuario.Text, txtSenha.Text);
+            var submeter = new UsuarioBO().Submeter(txtUsuario.Text, txtSenha.Text);
 
             if (submeter)
             {

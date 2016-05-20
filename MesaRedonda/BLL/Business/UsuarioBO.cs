@@ -9,11 +9,13 @@ namespace BLL.Business
 {
     class UsuarioBO
     {
+        UsuarioDA usuario = new UsuarioDA();
+
         public int Inserir(Usuario u)
         {
             try
             {
-                return UsuarioDA.Inserir(u);
+                return usuario.Inserir(u);
             }
 
             catch (Exception)
@@ -26,7 +28,7 @@ namespace BLL.Business
         {
             try
             {
-                var usuario = BuscarPorLogin(nomeUsuario);
+                var usuario = this.usuario.buscar(nomeUsuario);
 
                 if(usuario == null)
                 {
@@ -56,24 +58,11 @@ namespace BLL.Business
 }
         }
 
-        public Usuario BuscarPorLogin(string nomeUsuario)
-        {
-            try
-            {
-                return.Listar().FirstOnDefault(x => x.Login.Equals(nomeUsuario));
-            }
-
-            catch (Exception)
-            {
-                
-            }
-        }
-
         public int Atualizar(Usuario u)
         {
             try
             {
-                return UsuarioDA.Atualizar(u);
+                return usuario.Atualizar(u);
             }
 
             catch (Exception)
@@ -101,7 +90,7 @@ namespace BLL.Business
         {
             try
             {
-                return UsuarioDA.Listar();
+                return Usuario.Listar();
             }
 
             catch (Exception)

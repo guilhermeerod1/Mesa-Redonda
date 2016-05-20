@@ -135,6 +135,10 @@
     <Folder Include="Usuarios\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{82b4b97c-7cf3-425e-9769-261f0ebd7ce4}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{ed9a6d43-7369-49b4-b619-7da826b3a97b}</Project>
       <Name>DAL</Name>
