@@ -89,6 +89,10 @@
     <Content Include="Produtos\EdicaoProduto.aspx" />
     <Content Include="Produtos\Produtos.aspx" />
     <Content Include="Produtos\Scripts\produtosScript.js" />
+    <Content Include="Servicos\EdicaoServicos.aspx" />
+    <Content Include="Servicos\Servicos.aspx" />
+    <Content Include="Usuarios\EdicaoUsuarios.aspx" />
+    <Content Include="Usuarios\Usuarios.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -126,13 +130,39 @@
       <DependentUpon>Produtos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\EdicaoServicos.aspx.cs">
+      <DependentUpon>EdicaoServicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicos\EdicaoServicos.aspx.designer.cs">
+      <DependentUpon>EdicaoServicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicos\Servicos.aspx.cs">
+      <DependentUpon>Servicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicos\Servicos.aspx.designer.cs">
+      <DependentUpon>Servicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\EdicaoUsuarios.aspx.cs">
+      <DependentUpon>EdicaoUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\EdicaoUsuarios.aspx.designer.cs">
+      <DependentUpon>EdicaoUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Imagens\" />
     <Folder Include="Scripts\" />
-    <Folder Include="Servicos\" />
-    <Folder Include="Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
