@@ -1,0 +1,10 @@
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\bin\Debug\BLL.dll
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\bin\Debug\BLL.pdb
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\bin\Debug\DAL.dll
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\bin\Debug\DL.dll
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\bin\Debug\DAL.pdb
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\bin\Debug\DL.pdb
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\obj\Debug\BLL.dll
+C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\BLL\obj\Debug\BLL.pdb

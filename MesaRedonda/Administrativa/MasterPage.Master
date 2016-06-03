@@ -6,40 +6,55 @@
     <title></title>
     <!-- include libraries(jQuery, bootstrap) -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
     <!-- include summernote css/js-->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="container">
-        <h1>Mesa Redonda - Administrativo</h1>
-        <div class="nav btn-group" role="group">
-            <div class="btn-group">
-                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Usuários</button>
-                <ul class="dropdown-menu">
-                    <li><a>Cadastrar novo usuário</a></li>
-                    <li><a>Usuário cadastrados</a></li>
-                </ul>
-            </div>
-            <div class="btn-group">
-                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Produtos</button>
-                <ul class="dropdown-menu">            
-                    <li><a>Cadastrar novo produto</a></li>
-                    <li><a>Produtos cadastrados</a></li>
-                </ul>        
-            </div>
-            <div class="btn-group">
-                <button class="btn btn-default" data-toggle="dropdown">Serviços</button>
-                <ul class="dropdown-menu">
-                    <li><a>Cadastrar novo serviço</a></li>
-                    <li><a>Serviços cadastrados</a></li>
+    <div class="container-fluid">
+        <div style="padding: 10px">
+            <img src="../Imgs-Adm/logo.jpg" alt="logo" style="width: 175px; height: 150px;" />
+        </div>
+        <div class="nav navbar-inverse" role="group">
+            <div class="container-fluid">
+                <div class="nav navbar-header">
+                    <a class="navbar-brand" href="../Principal.aspx">Administrativo</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerenciamento de Usuários
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a>Novo Usuário</a></li>
+                            <li><a>Usuários cadastrados</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerencimento de Produtos
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Produtos/EdicaoProduto.aspx">Cadastrar novo produto</a></li>
+                            <li><a href="../Produtos/Produtos.aspx">Produtos cadastrados</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerenciamento de Serviços
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Servicos/EdicaoServico.aspx">Cadastrar novo serviço</a></li>
+                            <li><a href="../Servicos/Servicos.aspx">Serviços cadastrados</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

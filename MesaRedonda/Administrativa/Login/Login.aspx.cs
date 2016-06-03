@@ -14,9 +14,9 @@ namespace Administrativa.Login
 
         }
 
-        protected void btnSubmeter(object sender, EventArgs e)
-        {
+        //protected void btnSubmeter(object sender, EventArgs e)
+        //{
             // Aqui fara a busca do usuario por comandos? 
-        }
+        //}
     }
 }

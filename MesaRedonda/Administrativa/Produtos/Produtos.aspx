@@ -3,24 +3,42 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server"></asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3>Produtos cadastrados</h3>
     <hr />
-    <div>
+    <div style="padding: 5px; text-align: center">
+        <h1>Produtos</h1>
+    </div>
+    <hr />
+    <div class="well">
         <asp:Label ID="lblNumeroProdutos" runat="server"></asp:Label>
     </div>
     <div>
         <asp:Repeater ID="rptProdutos" runat="server" OnItemDataBound="rptProdutos_ItemDataBound">
-            <ItemTemplate>
-                <div>
-                    <div><asp:Label ID="lblIdProduto" runat="server"></asp:Label></div>
-                    <div><asp:Label ID="lblNome" runat="server"></asp:Label></div>
-                    <div><asp:Label ID="lblPreco" runat="server"></asp:Label></div>
-                    <div><asp:Image ID="imgFotoProduto" runat="server" /></div>
-                    <div><asp:Label ID="lblDescricao" runat="server"></asp:Label></div>
-                    <div>
-                        <asp:HyperLink ID="lnkRemover" runat="server" Text="Remover" />
-                        <asp:HyperLink ID="lnkEditar" runat="server" Text="Editar" />
-                    </div>                    
+            <ItemTemplate>                
+                <div class="panel panel-default">
+                    <div style="padding: 30px; overflow: auto;">
+                        <div style="text-align: center">
+                            <h1>
+                                <asp:Label ID="lblNome" runat="server"></asp:Label>
+                            </h1>
+                        </div>
+                        <div style="text-align: center; padding-top: 10px;">
+                            <asp:Image ID="imgFotoProduto" runat="server" CssClass="img-thumbnail" />
+                        </div>
+                        <div style="padding: 50px; clear: both;">
+                            <asp:Label ID="lblDescricao" runat="server"></asp:Label>
+                        </div>
+                        <div style="float: right">
+                            <h1>R$: 
+                                <asp:Label ID="lblPreco" runat="server"></asp:Label>
+                            </h1>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div style="float: right;">
+                            <asp:HyperLink ID="lnkRemover" runat="server" Text="Remover" />
+                            |  
+                            <asp:HyperLink ID="lnkEditar" runat="server" Text="Editar" />
+                        </div>
+                    </div>
                 </div>
             </ItemTemplate>
         </asp:Repeater>

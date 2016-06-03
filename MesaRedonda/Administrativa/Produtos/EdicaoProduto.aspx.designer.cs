@@ -13,15 +13,6 @@ namespace Administrativa.Produtos {
     public partial class EdicaoProduto {
         
         /// <summary>
-        /// hdnIdProduto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnIdProduto;
-        
-        /// <summary>
         /// txtNomeProduto control.
         /// </summary>
         /// <remarks>
@@ -31,15 +22,6 @@ namespace Administrativa.Produtos {
         protected global::System.Web.UI.WebControls.TextBox txtNomeProduto;
         
         /// <summary>
-        /// fuFotoProduto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuFotoProduto;
-        
-        /// <summary>
         /// txtPrecoProduto control.
         /// </summary>
         /// <remarks>
@@ -47,6 +29,15 @@ namespace Administrativa.Produtos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrecoProduto;
+        
+        /// <summary>
+        /// fuFotoProduto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuFotoProduto;
         
         /// <summary>
         /// txtDescricao control.

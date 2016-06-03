@@ -28,7 +28,10 @@ namespace DAL
                     comando.Parameters.Add("cnome", OracleDbType.Varchar2).Value = s.Nome;
                     comando.Parameters.Add("cpreco", OracleDbType.Decimal).Value = s.Preco;
                     comando.Parameters.Add("cdescricao", OracleDbType.Clob).Value = s.Descricao;
-                    comando.Parameters.Add("cIdImagem", OracleDbType.Int32).Value = s.Imagem.IdImagem;
+                    if (s.Imagem != null)
+                        comando.Parameters.Add("cIdImagem", OracleDbType.Int32).Value = s.Imagem.IdImagem;
+                    else
+                        comando.Parameters.Add("cIdImagem", OracleDbType.Int32).Value = null;
 
                     comando.ExecuteNonQuery();
 
@@ -52,8 +55,10 @@ namespace DAL
                     comando.Parameters.Add("cnome", OracleDbType.Varchar2).Value = s.Nome;
                     comando.Parameters.Add("cpreco", OracleDbType.Decimal).Value = s.Preco;
                     comando.Parameters.Add("cdescricao", OracleDbType.Clob).Value = s.Descricao;
-                    comando.Parameters.Add("cIdImagem", OracleDbType.Int32).Value = s.Imagem.IdImagem;
-
+                    if (s.Imagem != null)
+                        comando.Parameters.Add("cIdImagem", OracleDbType.Int32).Value = s.Imagem.IdImagem;
+                    else
+                        comando.Parameters.Add("cIdImagem", OracleDbType.Int32).Value = null;
                     comando.ExecuteNonQuery();
 
                 }
@@ -113,7 +118,12 @@ namespace DAL
                                 s.Nome = (string)reader["Nome"];
                                 s.Preco = Convert.ToDecimal(reader["Preco"]);
                                 s.Descricao = reader.GetOracleClob(reader.GetOrdinal("Descricao")).Value;
-                                s.Imagem = new ImagemDA().Buscar(Convert.ToInt32(reader["IdImagem"]));
+                                string idI = reader["idImagem"].ToString();
+                                if (!string.IsNullOrEmpty(idI))
+                                {
+                                    int idImagem = Convert.ToInt32(idI);
+                                    s.Imagem = new ImagemDA().Buscar(idImagem);
+                                }
 
                                 servicos.Add(s);
 
