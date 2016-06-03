@@ -74,7 +74,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HomePage\HomePage.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
@@ -92,6 +91,7 @@
     <Content Include="Produtos\Scripts\produtosScript.js" />
     <Content Include="Servicos\EdicaoServicos.aspx" />
     <Content Include="Servicos\Servicos.aspx" />
+    <Content Include="Usuarios\CadastroUsuario.aspx" />
     <Content Include="Usuarios\EdicaoUsuarios.aspx" />
     <Content Include="Usuarios\Usuarios.aspx" />
     <Content Include="Web.config">
@@ -101,13 +101,6 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="HomePage\HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HomePage\HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -151,6 +144,13 @@
     </Compile>
     <Compile Include="Servicos\Servicos.aspx.designer.cs">
       <DependentUpon>Servicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\CadastroUsuario.aspx.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\CadastroUsuario.aspx.designer.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\EdicaoUsuarios.aspx.cs">
       <DependentUpon>EdicaoUsuarios.aspx</DependentUpon>

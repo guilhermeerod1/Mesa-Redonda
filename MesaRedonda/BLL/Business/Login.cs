@@ -49,17 +49,5 @@ namespace BLL.Business
             }
         }
 
-        public int List<login> Listar()
-        {
-            try
-            {
-                return login.
-            }
-
-            catch (Exception)
-            {
-                throw;
-            }
         }
     }
-}

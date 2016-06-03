@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace BLL.Business
 {
-    class UsuarioBO
+    public class UsuarioBO
     {
         UsuarioDA usuario = new UsuarioDA();
 

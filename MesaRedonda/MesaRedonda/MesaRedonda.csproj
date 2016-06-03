@@ -70,7 +70,34 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HomePage.aspx" />
+    <Content Include="Imgs\agradece1.png" />
+    <Content Include="Imgs\background3.jpg" />
+    <Content Include="Imgs\background4.jpg" />
+    <Content Include="Imgs\background5.jpg" />
+    <Content Include="Imgs\background6.jpg" />
+    <Content Include="Imgs\favicon1.png" />
+    <Content Include="Imgs\historia1.jpg" />
+    <Content Include="Imgs\historia3.jpg" />
+    <Content Include="Imgs\LogoFactory.jpg" />
+    <Content Include="Imgs\pizza1.jpg" />
+    <Content Include="Imgs\pizza10.jpg" />
+    <Content Include="Imgs\pizza11.jpg" />
+    <Content Include="Imgs\pizza2.jpg" />
+    <Content Include="Imgs\pizza3.jpg" />
+    <Content Include="Imgs\pizza4.jpg" />
+    <Content Include="Imgs\pizza6.jpg" />
+    <Content Include="Imgs\pizza7.jpg" />
+    <Content Include="Imgs\pizza9.jpg" />
+    <Content Include="Imgs\pizzaiolo.png" />
+    <Content Include="Navbar\cardapio.aspx" />
+    <Content Include="Navbar\contato.aspx" />
+    <Content Include="Navbar\galeria.aspx" />
+    <Content Include="Navbar\novidades.aspx" />
+    <Content Include="Navbar\historia.aspx" />
+    <Content Include="Navbar\servico.aspx" />
     <Content Include="packages.config" />
+    <Content Include="MasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -85,6 +112,62 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar\cardapio.aspx.cs">
+      <DependentUpon>cardapio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar\cardapio.aspx.designer.cs">
+      <DependentUpon>cardapio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar\contato.aspx.cs">
+      <DependentUpon>contato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar\contato.aspx.designer.cs">
+      <DependentUpon>contato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar\galeria.aspx.cs">
+      <DependentUpon>galeria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar\galeria.aspx.designer.cs">
+      <DependentUpon>galeria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar\novidades.aspx.cs">
+      <DependentUpon>novidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar\novidades.aspx.designer.cs">
+      <DependentUpon>novidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar\historia.aspx.cs">
+      <DependentUpon>historia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar\historia.aspx.designer.cs">
+      <DependentUpon>historia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Navbar\servico.aspx.cs">
+      <DependentUpon>servico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navbar\servico.aspx.designer.cs">
+      <DependentUpon>servico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

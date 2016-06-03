@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
 using System.Web.Security;
+using BLL.Business;
 
 namespace Administrativa.Login
 {
@@ -22,7 +23,7 @@ namespace Administrativa.Login
 
             if (submeter)
             {
-                FormsAuthentication.RedirectFormLoginPage(usuarioTextBox.Text, false);
+                FormsAuthentication.RedirectFromLoginPage(usuarioTextBox.Text, false);
                 Response.Redirect("Default.aspx", true);
             }
 
