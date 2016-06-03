@@ -14,7 +14,7 @@
         <p>Entre com uma senha</p>
         <asp:TextBox ID="senhaTextBox" Text="Insira a senha neste campo" runat="server" />
 
-        <asp:Button ID="btnSubmeter" Text="Logar" runat="server" OnClick="submitEventMethod" />
+        <asp:Button ID="btnSubmeter" Text="Logar" runat="server" OnClick="btnSubmeter_OnClick" />
 
     </div>
     </form>
