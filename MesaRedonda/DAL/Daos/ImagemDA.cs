@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class ImagemDA
+    public class ImagemDA
     {
         private String connString = ConfigurationManager.ConnectionStrings["connString"].ConnectionString;
 
@@ -96,6 +96,7 @@ namespace DAL
                                 Imagem i = new Imagem();
                                 i.IdImagem = Convert.ToInt32(reader["IdImagem"]);
                                 i.Caminho = (string)reader["Caminho"];
+                                imagens.Add(i);
                             }
                         }
                     }

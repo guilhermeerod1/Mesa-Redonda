@@ -7,37 +7,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Administrativa.Produtos {
+namespace Administrativa.Servicos {
     
     
-    public partial class EdicaoProduto {
+    public partial class EdicaoServico {
         
         /// <summary>
-        /// txtNomeProduto control.
+        /// txtNomeServico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeProduto;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeServico;
         
         /// <summary>
-        /// txtPrecoProduto control.
+        /// fuFotoServico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecoProduto;
+        protected global::System.Web.UI.WebControls.FileUpload fuFotoServico;
         
         /// <summary>
-        /// fuFotoProduto control.
+        /// txtPrecoServico control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuFotoProduto;
+        protected global::System.Web.UI.WebControls.TextBox txtPrecoServico;
         
         /// <summary>
         /// txtDescricao control.
@@ -49,15 +49,6 @@ namespace Administrativa.Produtos {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtDescricao;
         
         /// <summary>
-        /// btnSalvar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSalvar;
-        
-        /// <summary>
         /// lblMensagem control.
         /// </summary>
         /// <remarks>
@@ -65,5 +56,14 @@ namespace Administrativa.Produtos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensagem;
+        
+        /// <summary>
+        /// btnSalvar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSalvar;
     }
 }

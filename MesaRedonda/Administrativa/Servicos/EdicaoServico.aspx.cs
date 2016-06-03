@@ -1,28 +1,28 @@
-﻿using BLL;
-using DL;
+﻿using DL;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
 
-namespace Administrativa.Produtos
+namespace Administrativa.Servicos
 {
-    public partial class EdicaoProduto : System.Web.UI.Page
+    public partial class EdicaoServico : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {            
+        {
             try
             {
-                string idProduto = Page.Request.QueryString["id"];
-                if(!string.IsNullOrEmpty(idProduto))
+                string idServico = Page.Request.QueryString["id"];
+                if (!string.IsNullOrEmpty(idServico))
                 {
                     if (!Page.IsPostBack)
                     {
-                        Produto p = new ProdutoBO()
-                            .Buscar(Convert.ToInt32(idProduto));
+                        Servico p = new ServicoBO()
+                            .Buscar(Convert.ToInt32(idServico));
                         preencherCampos(p);
                     }
                 }
@@ -30,42 +30,43 @@ namespace Administrativa.Produtos
             catch (Exception ae)
             {
                 lblMensagem.Text = ae.Message;
-            }            
+            }
         }
 
-        private void preencherCampos(Produto p)
+        private void preencherCampos(Servico p)
         {
-            txtNomeProduto.Text = p.Nome;
-            txtPrecoProduto.Text = p.Preco.ToString();
+            txtNomeServico.Text = p.Nome;
+            txtPrecoServico.Text = p.Preco.ToString();
             txtDescricao.InnerHtml = p.Descricao;
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            ProdutoBO bo = new ProdutoBO();
+            ServicoBO bo = new ServicoBO();
 
-            try {
+            try
+            {
 
-                Produto p = new Produto();
+                Servico p = new Servico();
 
                 string id = Page.Request.QueryString["id"];
 
-                p.Nome = txtNomeProduto.Text;
-                p.Preco = Convert.ToInt32(txtPrecoProduto.Text);
+                p.Nome = txtNomeServico.Text;
+                p.Preco = Convert.ToInt32(txtPrecoServico.Text);
                 p.Descricao = Server.HtmlDecode(txtDescricao.InnerHtml);
 
-                if(fuFotoProduto.HasFile)
+                if (fuFotoServico.HasFile)
                 {
                     StringBuilder sb = new StringBuilder();
-                    
-                    if(!checarUpload(fuFotoProduto, sb))
+
+                    if (!checarUpload(fuFotoServico, sb))
                     {
                         lblMensagem.Text = sb.ToString();
                         return;
                     }
-                    
-                    string caminho = "~/Imagens/" + fuFotoProduto.FileName;
-                    fuFotoProduto.SaveAs(Server.MapPath(caminho));
+
+                    string caminho = "~/Imagens/" + fuFotoServico.FileName;
+                    fuFotoServico.SaveAs(Server.MapPath(caminho));
                     p.Imagem = bo.ImagemBO.Inserir(caminho);
 
                 }
@@ -81,38 +82,38 @@ namespace Administrativa.Produtos
                     }
                 }
 
-                if(string.IsNullOrEmpty(id))
+                if (string.IsNullOrEmpty(id))
                     bo.Inserir(p);
                 else
                 {
-                    p.IdProduto = Convert.ToInt32(id);
+                    p.IdServico = Convert.ToInt32(id);
                     bo.Atualizar(p);
                 }
 
                 Limpar();
 
-                lblMensagem.Text = "Produto salvo com sucesso.";
+                lblMensagem.Text = "Servico salvo com sucesso.";
 
             }
-            catch(Exception ee)
+            catch (Exception ee)
             {
                 lblMensagem.Text = ee.Message;
-            }     
+            }
 
         }
-        
+
         private void Limpar()
         {
-            txtNomeProduto.Text = string.Empty;
-            txtPrecoProduto.Text = string.Empty;
-            txtDescricao.InnerHtml = string.Empty;            
+            txtNomeServico.Text = string.Empty;
+            txtPrecoServico.Text = string.Empty;
+            txtDescricao.InnerHtml = string.Empty;
         }
 
-        private bool checarUpload(FileUpload fuFotoProduto, StringBuilder sb)
+        private bool checarUpload(FileUpload fuFotoServico, StringBuilder sb)
         {
             bool imgValida = true;
-            ProdutoBO bo = new ProdutoBO();
-            string fileName = fuFotoProduto.FileName;
+            ServicoBO bo = new ServicoBO();
+            string fileName = fuFotoServico.FileName;
 
             if (!bo.ImagemBO.NomeValido(fileName))
             {
@@ -130,13 +131,13 @@ namespace Administrativa.Produtos
                 imgValida = false;
             }
 
-            if (fuFotoProduto.PostedFile.ContentLength > 3 * 1048576)
+            if (fuFotoServico.PostedFile.ContentLength > 3 * 1048576)
             {
                 sb.Append("Arquivos maiores que 3MB não são aceitos.");
                 imgValida = false;
             }
-            return imgValida;            
+            return imgValida;
         }
-                
+
     }
 }

@@ -1,30 +1,41 @@
-﻿<%@ Page Title="Edição de Produtos" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EdicaoProduto.aspx.cs" Inherits="Administrativa.Produtos.EdicaoProduto" %>
+﻿<%@ Page Title="Edição de Produtos" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EdicaoProduto.aspx.cs" Inherits="Administrativa.Produtos.EdicaoProduto" ValidateRequest="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="Scripts/produtosScript.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <script>
-        var descricaoProduto = "";
-    </script>
     <br />    
-    <div class="panel panel-default">
+    <div class="well">Produto</div>
+    <div class="panel panel-default">        
         <form runat="server" class="panel-body">
-            <asp:ScriptManager runat="server"></asp:ScriptManager>
-            <h3>Produto</h3>
-            <asp:HiddenField ID="hdnIdProduto" runat="server" />
+            <asp:ScriptManager runat="server"></asp:ScriptManager>            
             <label>Nome:</label><br />
-            <asp:TextBox ID="txtNomeProduto" runat="server" CssClass="form-control"></asp:TextBox><br />
-            <label>Foto do Produto:</label><br />
-            <asp:FileUpload ID="fuFotoProduto" runat="server" /><br />
-            <label>Preço:</label><br />
-            <asp:TextBox ID="txtPrecoProduto" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <asp:TextBox ID="txtNomeProduto" runat="server" CssClass="form-control" >
+            </asp:TextBox><br />
+            <label>Preço:</label><br />            
+            <asp:TextBox ID="txtPrecoProduto" runat="server" CssClass="form-control">
+            </asp:TextBox><br />
+            <label>Imagem:</label><br />
+            <asp:FileUpload ID="fuFotoProduto" runat="server" /><br />            
             <label>Descrição:</label><br />
-            <textarea id="txtDescricao" runat="server" ClientId="Predictable"></textarea>
+            <textarea id="txtDescricao" runat="server"></textarea>
             <br />
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-success" OnClick="btnSalvar_Click" />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
         </form>
     </div>
+    <script>
+        function prepararEdicao() {
+            var idTxtDescricao = '#' + '<%=txtDescricao.ClientID%>';
+            $(idTxtDescricao).summernote();
+            $(idTxtDescricao).on('summernote.blur', function () {
+                $(idTxtDescricao).html($(idTxtDescricao).summernote('code'));
+            })
+            if (edicao) {
+                $(idTxtDescricao)
+                    .summernote('code', '<%=txtDescricao.InnerHtml%>');
+            }
+        }
+        $(document).ready(prepararEdicao());
+    </script>
 </asp:Content>

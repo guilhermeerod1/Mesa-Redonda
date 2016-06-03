@@ -1,8 +1,9 @@
-﻿using DAL;
+﻿using BLL;
 using DL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,45 +15,73 @@ namespace Administrativa.Produtos
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            ProdutoDA dao = new ProdutoDA();
+            ProdutoBO bo = new ProdutoBO();
 
-            if(Page.IsPostBack)
+            string id = Request.QueryString["id"];
+
+            if (!string.IsNullOrEmpty(id))
+                bo.Remover(Convert.ToInt32(id));
+
+            List<Produto> produtos = bo.Listar();
+
+            int numeroProdutos = produtos.Count;
+
+            StringBuilder sb = new StringBuilder();
+
+            if (numeroProdutos > 0)
             {
-                string idProdutoARemover = Request.QueryString["id"];
-                int id = Convert.ToInt32(idProdutoARemover);
-                dao.RemoverProduto(id);
-            }
-
-            List<Produto> produtos = dao.Listar();
-
-            if (produtos != null && produtos.Count != 0)
-            {
-
-                lblNumeroProdutos.Text = "Número de produtos cadastrados: " + produtos.Count.ToString();
+                sb.Append("Produtos cadastrados: ").Append(numeroProdutos);
                 rptProdutos.DataSource = produtos;
                 rptProdutos.DataBind();
-
-            } else
-            {
-                lblNumeroProdutos.Text = "Nenhum produto cadastrado. " + "<a href='EdicaoProduto.aspx'>Cadastrar Novo</a>";
             }
+            else
+                sb.Append("Nenhum produto cadastrado.");
+
+            sb.Append(" <a href='EdicaoProduto.aspx'>Cadastrar Novo</a>");
+            lblNumeroProdutos.Text = sb.ToString();
 
         }
 
-        protected void rptProdutos_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        protected void rptProdutos_ItemDataBound
+            (
+                object sender, 
+                RepeaterItemEventArgs e
+            )
         {
-            if (e.Item.ItemType == ListItemType.Item)
+            if (
+                    e.Item.ItemType == ListItemType.Item || 
+                    e.Item.ItemType == ListItemType.AlternatingItem
+                )
             {
 
                 Produto p = (Produto)e.Item.DataItem;
+                
+                ((Label)e.Item.FindControl("lblNome"))
+                    .Text = p.Nome;
 
-                ((Label)e.Item.FindControl("lblIdProduto")).Text = p.IdProduto.ToString();
-                ((Label)e.Item.FindControl("lblNome")).Text = p.Nome;
-                ((Label)e.Item.FindControl("lblPreco")).Text = p.Preco.ToString();
-                ((Image)e.Item.FindControl("imgFotoProduto")).ImageUrl = p.Imagem.Caminho;
-                ((Label)e.Item.FindControl("lblDescricao")).Text = p.Descricao;
-                ((HyperLink)e.Item.FindControl("lnkRemover")).NavigateUrl = "~/Produtos.aspx?id=" + p.IdProduto;
-                ((HyperLink)e.Item.FindControl("lnkEditar")).NavigateUrl = "~/EdicaoProduto.aspx?id=" + p.IdProduto;
+                ((Label)e.Item.FindControl("lblPreco"))
+                    .Text = string.Format("{0:N}", p.Preco);
+
+                string url;
+
+                if (p.Imagem != null)
+                    url = p.Imagem.Caminho;
+                else
+                    url = "~/Imagens/padrao.png";
+
+                ((Image)e.Item.FindControl("imgFotoProduto"))
+                    .ImageUrl = url;                
+
+                ((Label)e.Item.FindControl("lblDescricao"))
+                    .Text = p.Descricao;
+
+                int id = p.IdProduto;
+
+                ((HyperLink)e.Item.FindControl("lnkRemover"))
+                    .NavigateUrl = "~/Produtos/Produtos.aspx?id=" + id;
+
+                ((HyperLink)e.Item.FindControl("lnkEditar"))
+                    .NavigateUrl = "~/Produtos/EdicaoProduto.aspx?id=" + id;
 
             }
         }
