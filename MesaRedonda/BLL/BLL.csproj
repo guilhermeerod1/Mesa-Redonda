@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImagemBO.cs" />
-    <Compile Include="ProdutoBO.cs" />
+    <Compile Include="Business\Login.cs" />
+    <Compile Include="Business\UsuarioBO.cs" />
+    <Compile Include="Business\ImagemBO.cs" />
+    <Compile Include="Business\ProdutoBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServicoBO.cs" />
+    <Compile Include="Business\ServicoBO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
