@@ -77,6 +77,13 @@
     <Content Include="Imgs\background5.jpg" />
     <Content Include="Imgs\background6.jpg" />
     <Content Include="Imgs\favicon1.png" />
+    <Content Include="Imgs\galeria1.jpg" />
+    <Content Include="Imgs\galeria2.jpg" />
+    <Content Include="Imgs\galeria3.jpg" />
+    <Content Include="Imgs\galeria4.jpg" />
+    <Content Include="Imgs\galeria5.jpg" />
+    <Content Include="Imgs\galeria6.jpg" />
+    <Content Include="Imgs\galeria7.jpg" />
     <Content Include="Imgs\historia1.jpg" />
     <Content Include="Imgs\historia3.jpg" />
     <Content Include="Imgs\LogoFactory.jpg" />
@@ -90,6 +97,8 @@
     <Content Include="Imgs\pizza7.jpg" />
     <Content Include="Imgs\pizza9.jpg" />
     <Content Include="Imgs\pizzaiolo.png" />
+    <Content Include="Imgs\servico1.jpg" />
+    <Content Include="Imgs\servico2.jpg" />
     <Content Include="Navbar\cardapio.aspx" />
     <Content Include="Navbar\contato.aspx" />
     <Content Include="Navbar\galeria.aspx" />
@@ -174,6 +183,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{82b4b97c-7cf3-425e-9769-261f0ebd7ce4}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DL\DL.csproj">
+      <Project>{2866f96b-5058-49a9-b933-96fa4e33c0a7}</Project>
+      <Name>DL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

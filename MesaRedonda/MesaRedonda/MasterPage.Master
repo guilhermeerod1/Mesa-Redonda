@@ -14,7 +14,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
       <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-  </head>
+  <meta name="description" content="The description of my page" />
+</head>
   <body style="background-image:url('../Imgs/background6.jpg')">
     <div style="width:100%; background-color:white"><img src="../Imgs/LogoFactory.jpg" style="height: 127px; width: 151px"></div>
     <div class="navbar navbar-default navbar-static-top">
