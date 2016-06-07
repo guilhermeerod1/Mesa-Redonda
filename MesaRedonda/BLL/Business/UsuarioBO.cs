@@ -9,13 +9,13 @@ namespace BLL.Business
 {
     public class UsuarioBO
     {
-        UsuarioDA usuario = new UsuarioDA();
+        UsuarioDA dao = new UsuarioDA();
 
         public int Inserir(Usuario u)
         {
             try
             {
-                return usuario.Inserir(u);
+                return dao.Inserir(u);
             }
 
             catch (Exception)
@@ -28,7 +28,7 @@ namespace BLL.Business
         {
             try
             {
-                var usuario = this.usuario.buscar(nomeUsuario);
+                var usuario = this.dao.buscar(nomeUsuario);
 
                 if(usuario == null)
                     return false;
@@ -49,7 +49,7 @@ namespace BLL.Business
         {
             try
             {
-                return usuario.buscar(id);
+                return dao.buscar(id);
             }
 
             catch (Exception)
@@ -62,7 +62,7 @@ namespace BLL.Business
         {
             try
             {
-                return usuario.Atualizar(u);
+                return dao.Atualizar(u);
             }
 
             catch (Exception)
@@ -71,11 +71,11 @@ namespace BLL.Business
             }
         }
 
-        public int Remover(Usuario u)
+        public int Remover(int id)
         {
             try
             {
-                return usuario.Remover(u.IdUsuario);
+                return dao.Remover(id);
             }
 
             catch (Exception)
@@ -90,7 +90,7 @@ namespace BLL.Business
         {
             try
             {
-                return usuario.listar();
+                return dao.listar();
             }
 
             catch (Exception)

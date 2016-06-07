@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EdicaoServico.aspx.cs" Inherits="Administrativa.Servicos.EdicaoServico" ValidateRequest="false" %>
+﻿<%@ Page Title="Edição de Serviços" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EdicaoServico.aspx.cs" Inherits="Administrativa.Servicos.EdicaoServico" ValidateRequest="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+    <div class="well">Serviço</div>
     <div class="panel panel-default">
-        <form runat="server" class="panel-body">
-            <asp:ScriptManager runat="server"></asp:ScriptManager>
-            <h3>Serviço</h3>
+        <div class="panel-body">
             <label>Nome:</label><br />
             <asp:TextBox ID="txtNomeServico" runat="server" CssClass="form-control"></asp:TextBox><br />
             <label>Imagem</label><br />
@@ -18,8 +18,8 @@
             <textarea id="txtDescricao" runat="server"></textarea>
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label><br />
-            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-success" OnClick="btnSalvar_Click" />            
-        </form>
+            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-success" OnClick="btnSalvar_Click" />
+        </div>
     </div>
     <script>
         function prepararEdicao() {

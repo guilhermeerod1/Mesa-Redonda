@@ -1,22 +1,30 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Administrativa.Login.Login" %>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-    <title></title>
+    <title>Autenticação</title>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" type="text/css" />
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <p>Entre com um e-mail</p>
-        <asp:TextBox ID="usuarioTextBox" Text="Insira o email neste campo" runat="server" />
-        <p>Entre com uma senha</p>
-        <asp:TextBox ID="senhaTextBox" Text="Insira a senha neste campo" runat="server" />
-
-        <asp:Button ID="btnSubmeter" Text="Logar" runat="server" OnClick="btnSubmeter_OnClick" />
-
+    <div class="container-fluid">
+        <header class="container-fluid" style="text-align: center; padding: 10px;">
+            <img src="../Imgs-Adm/logo.jpg" alt="Logo do sistema" width="180" height="155" />
+        </header>
+        <hr />
+        <form id="formLogin" runat="server">
+            <div class="container">
+                <label>Nome de Usuário:</label><br />
+                <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" /><br />
+                <label>Senha:</label><br />
+                <asp:TextBox ID="txtSenha" TextMode="Password" runat="server" CssClass="form-control" /><br />
+                <div style="text-align:right;">
+                    <asp:Button ID="btnSubmeter" Text="Logar" runat="server" OnClick="btnSubmeter_OnClick" CssClass="btn btn-success" />
+                </div>
+            </div>
+        </form>
     </div>
-    </form>
 </body>
 </html>

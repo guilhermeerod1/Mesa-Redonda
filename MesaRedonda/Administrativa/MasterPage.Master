@@ -4,60 +4,69 @@
 <html lang="pt-br">
 <head runat="server">
     <title></title>
-    <!-- include libraries(jQuery, bootstrap) -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-    <!-- include summernote css/js-->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- JQuery e bootstrap -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/bootstrap.min.css") %>" type="text/css" />
+    <script src='<%= ResolveUrl("~/Scripts/jquery-1.9.1.min.js") %>'></script>
+    <script src='<%= ResolveUrl("/Scripts/bootstrap.min.js") %>'></script>
+    <!-- Summernote -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/summernote-0.8.1-dist/dist/summernote.css") %>" />
+    <script src='<%= ResolveUrl("~/summernote-0.8.1-dist/dist/summernote.min.js") %>'></script>
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="container-fluid">
-        <div style="padding: 10px">
-            <img src="../Imgs-Adm/logo.jpg" alt="logo" style="width: 175px; height: 150px;" />
-        </div>
-        <div class="nav navbar-inverse" role="group">
-            <div class="container-fluid">
-                <div class="nav navbar-header">
-                    <a class="navbar-brand" href="../Principal.aspx">Administrativo</a>
+    <form runat="server">
+        <div class="container-fluid">
+            <div style="padding: 10px; text-align: center;">
+                <img src="../Imgs-Adm/logo.jpg" alt="logo" style="width: 175px; height: 150px;" />
+            </div>
+            <div class="nav navbar-inverse" role="group">
+                <div class="container-fluid">
+                    <div class="nav navbar-header">
+                        <a class="navbar-brand" href="../Principal.aspx">Administrativo</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerenciamento de Usuários
+                            <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../Usuarios/EdicaoUsuarios.aspx">Novo Usuário</a></li>
+                                <li><a href="../Usuarios/Usuarios.aspx">Usuários cadastrados</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerencimento de Produtos
+                            <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../Produtos/EdicaoProduto.aspx">Cadastrar novo produto</a></li>
+                                <li><a href="../Produtos/Produtos.aspx">Produtos cadastrados</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerenciamento de Serviços
+                            <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../Servicos/EdicaoServico.aspx">Cadastrar novo serviço</a></li>
+                                <li><a href="../Servicos/Servicos.aspx">Serviços cadastrados</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerenciamento de Usuários
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a>Novo Usuário</a></li>
-                            <li><a>Usuários cadastrados</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerencimento de Produtos
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../Produtos/EdicaoProduto.aspx">Cadastrar novo produto</a></li>
-                            <li><a href="../Produtos/Produtos.aspx">Produtos cadastrados</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerenciamento de Serviços
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../Servicos/EdicaoServico.aspx">Cadastrar novo serviço</a></li>
-                            <li><a href="../Servicos/Servicos.aspx">Serviços cadastrados</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            </div>
+            <br />
+            <div class="container-fluid" style="overflow: auto; text-align: right;">
+                <asp:Button ID="btnSair" runat="server" Text="Sair" OnClick="btnSair_Click" CssClass="btn btn-danger" />
+            </div>
+            <br />
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
             </div>
         </div>
-        <div class="container-fluid">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-    </div>
+    </form>
 </body>
 </html>

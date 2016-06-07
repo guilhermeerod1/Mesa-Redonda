@@ -13,17 +13,16 @@ namespace BLL
     public class ImagemBO
     {
 
+        private ImagemDA dao = new ImagemDA();
+
         public List<Imagem> Listar()
         {
-            List<Imagem> lista = new ImagemDA().Listar();
-            if (lista == null)
-                throw new ArgumentException("Erro, nao foi possivel criar lista");
-            return lista;
+            return dao.Listar();
         }
 
         public Imagem Buscar(int id)
         {
-            Imagem i = new ImagemDA().Buscar(id);
+            Imagem i = dao.Buscar(id);
             if (i == null)
                 throw new ArgumentException("Id invalido");
             return i;
@@ -41,18 +40,18 @@ namespace BLL
         {
             Imagem i = new Imagem();
             i.Caminho = caminho;
-            new ImagemDA().InserirImagem(i);
+            dao.InserirImagem(i);
             return Buscar(i.Caminho);
         }
 
         public void Remover(int id)
         {
-            new ImagemDA().RemoverImagem(id);
+            dao.RemoverImagem(id);
         }
 
         public void Atualizar(Imagem i)
         {
-            new ImagemDA().AtualizarImagem(i);
+            dao.AtualizarImagem(i);
         }
 
         public bool NomeValido(string nome)

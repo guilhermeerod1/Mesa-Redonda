@@ -10,17 +10,18 @@ namespace BLL
 {
     public class ProdutoBO
     {
+        private ProdutoDA dao;
+        public ImagemBO ImagemBO { get; set; }        
 
         public ProdutoBO()
         {
             ImagemBO = new ImagemBO();
-        }
-
-        public ImagemBO ImagemBO { get; set; }
+            dao = new ProdutoDA();
+        }        
 
         public Produto Buscar(int idProduto)
         {
-            Produto p = new ProdutoDA().Buscar(idProduto);
+            Produto p = dao.Buscar(idProduto);
             if (p == null)
                 throw new ArgumentException("Produto não encontrado");
             return p;
@@ -28,25 +29,22 @@ namespace BLL
 
         public void Remover(int idProduto)
         {
-            new ProdutoDA().RemoverProduto(idProduto);
+            dao.RemoverProduto(idProduto);
         }
 
         public List<Produto> Listar()
         {
-            List<Produto> lista = new ProdutoDA().Listar();
-            if (lista == null)
-                throw new ArgumentException("Erro");
-            return lista;
+            return dao.Listar();
         }
 
         public void Inserir(Produto p)
         {
-            new ProdutoDA().InserirProduto(p);
+            dao.InserirProduto(p);
         }
 
         public void Atualizar(Produto p)
         {
-            new ProdutoDA().AtualizarProduto(p);
+            dao.AtualizarProduto(p);
         }
 
     }

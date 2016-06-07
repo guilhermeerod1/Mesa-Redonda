@@ -13,15 +13,6 @@ namespace Administrativa.Usuarios {
     public partial class EdicaoUsuarios {
         
         /// <summary>
-        /// hdnIdUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnIdUsuario;
-        
-        /// <summary>
         /// txtNomeUsuario control.
         /// </summary>
         /// <remarks>
@@ -31,13 +22,13 @@ namespace Administrativa.Usuarios {
         protected global::System.Web.UI.WebControls.TextBox txtNomeUsuario;
         
         /// <summary>
-        /// txtTipo control.
+        /// rbListTipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipo;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbListTipo;
         
         /// <summary>
         /// txtSenha control.
@@ -49,6 +40,15 @@ namespace Administrativa.Usuarios {
         protected global::System.Web.UI.WebControls.TextBox txtSenha;
         
         /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
         /// txtTelefone control.
         /// </summary>
         /// <remarks>
@@ -58,15 +58,6 @@ namespace Administrativa.Usuarios {
         protected global::System.Web.UI.WebControls.TextBox txtTelefone;
         
         /// <summary>
-        /// btnSalvar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSalvar;
-        
-        /// <summary>
         /// lblMensagem control.
         /// </summary>
         /// <remarks>
@@ -74,5 +65,14 @@ namespace Administrativa.Usuarios {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensagem;
+        
+        /// <summary>
+        /// btnSalvar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSalvar;
     }
 }

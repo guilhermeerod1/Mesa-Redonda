@@ -1,29 +1,29 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EdicaoUsuarios.aspx.cs" Inherits="Administrativa.Usuarios.EdicaoUsuarios" %>
+﻿<%@ Page Title="Edição de Usuários" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EdicaoUsuarios.aspx.cs" Inherits="Administrativa.Usuarios.EdicaoUsuarios" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="panel panel-default">
-        <form runat="server" class="panel-body">
-            <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <div class="panel-body">
             <h3>Usuário</h3>
-            <asp:HiddenField ID="hdnIdUsuario" runat="server" />
+            <br />
             <label>Nome:</label><br />
             <asp:TextBox ID="txtNomeUsuario" runat="server" CssClass="form-control"></asp:TextBox><br />
             <label>Tipo:</label><br />
-            <asp:TextBox ID="txtTipo" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <asp:RadioButtonList ID="rbListTipo" runat="server">
+                <asp:ListItem Text="Administrador" Value="A"></asp:ListItem>
+                <asp:ListItem Text="Padrão" Value="P"></asp:ListItem>
+            </asp:RadioButtonList>
             <label>Senha:</label><br />
             <asp:TextBox ID="txtSenha" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <label>Email:</label><br />
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox><br />
             <label>Telefone:</label><br />
             <asp:TextBox ID="txtTelefone" runat="server" CssClass="form-control"></asp:TextBox><br />
             <br />
+            <asp:Label ID="lblMensagem" runat="server"></asp:Label><br />
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" CssClass="btn btn-success" OnClick="btnSalvar_Click" />
-            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-        </form>
+        </div>
     </div>
-</body>
-</html>
+</asp:Content>

@@ -74,9 +74,32 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Imgs-Adm\logo.jpg" />
     <Content Include="Login\Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="summernote-0.8.1-dist\dist\font\summernote.eot" />
+    <Content Include="summernote-0.8.1-dist\dist\font\summernote.ttf" />
+    <Content Include="summernote-0.8.1-dist\dist\font\summernote.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,12 +109,52 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Principal.aspx" />
     <Content Include="Produtos\EdicaoProduto.aspx" />
     <Content Include="Produtos\Produtos.aspx" />
-    <Content Include="Produtos\Scripts\produtosScript.js" />
-    <Content Include="Servicos\EdicaoServicos.aspx" />
+    <Content Include="Servicos\EdicaoServico.aspx" />
     <Content Include="Servicos\Servicos.aspx" />
-    <Content Include="Usuarios\CadastroUsuario.aspx" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-ar-AR.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-bg-BG.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-ca-ES.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-cs-CZ.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-da-DK.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-de-DE.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-es-ES.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-es-EU.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-fa-IR.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-fi-FI.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-fr-FR.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-he-IL.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-hu-HU.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-id-ID.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-it-IT.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-ja-JP.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-ko-KR.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-lt-LT.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-nb-NO.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-nl-NL.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-pl-PL.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-pt-BR.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-pt-PT.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-ro-RO.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-ru-RU.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-sk-SK.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-sl-SI.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-sr-RS.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-sv-SE.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-th-TH.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-tr-TR.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-uk-UA.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-vi-VN.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-zh-CN.js" />
+    <Content Include="summernote-0.8.1-dist\dist\lang\summernote-zh-TW.js" />
+    <Content Include="summernote-0.8.1-dist\dist\plugin\hello\summernote-ext-hello.js" />
+    <Content Include="summernote-0.8.1-dist\dist\plugin\specialchars\summernote-ext-specialchars.js" />
+    <Content Include="summernote-0.8.1-dist\dist\summernote.css" />
+    <Content Include="summernote-0.8.1-dist\dist\summernote.js" />
+    <Content Include="summernote-0.8.1-dist\dist\summernote.min.js" />
     <Content Include="Usuarios\EdicaoUsuarios.aspx" />
     <Content Include="Usuarios\Usuarios.aspx" />
     <Content Include="Web.config">
@@ -116,6 +179,13 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Produtos\EdicaoProduto.aspx.cs">
       <DependentUpon>EdicaoProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,12 +201,12 @@
       <DependentUpon>Produtos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicos\EdicaoServicos.aspx.cs">
-      <DependentUpon>EdicaoServicos.aspx</DependentUpon>
+    <Compile Include="Servicos\EdicaoServico.aspx.cs">
+      <DependentUpon>EdicaoServico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Servicos\EdicaoServicos.aspx.designer.cs">
-      <DependentUpon>EdicaoServicos.aspx</DependentUpon>
+    <Compile Include="Servicos\EdicaoServico.aspx.designer.cs">
+      <DependentUpon>EdicaoServico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Servicos\Servicos.aspx.cs">
       <DependentUpon>Servicos.aspx</DependentUpon>
@@ -144,13 +214,6 @@
     </Compile>
     <Compile Include="Servicos\Servicos.aspx.designer.cs">
       <DependentUpon>Servicos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\CadastroUsuario.aspx.cs">
-      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuarios\CadastroUsuario.aspx.designer.cs">
-      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\EdicaoUsuarios.aspx.cs">
       <DependentUpon>EdicaoUsuarios.aspx</DependentUpon>
@@ -170,7 +233,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Imagens\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

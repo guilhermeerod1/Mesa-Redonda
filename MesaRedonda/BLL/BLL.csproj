@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Login.cs" />
     <Compile Include="Business\UsuarioBO.cs" />
     <Compile Include="Business\ImagemBO.cs" />
     <Compile Include="Business\ProdutoBO.cs" />
