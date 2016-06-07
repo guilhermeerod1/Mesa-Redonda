@@ -31,25 +31,25 @@
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active">
-              <a href="HomePage.aspx" target="_self">HOME</a>
+              <a href="HomePage.aspx">HOME</a>
             </li>
             <li>
-              <a href="../Navbar/historia.aspx" target="_blank">HISTÓRIA</a>
+              <a href="../Navbar/historia.aspx">HISTÓRIA</a>
             </li>
             <li>
-              <a href="../Navbar/cardapio.aspx" target="_blank">CARDÁPIO</a>
+              <a href="../Navbar/cardapio.aspx">CARDÁPIO</a>
             </li>
             <li>
-              <a href="../Navbar/servico.aspx" target="_blank">SERVIÇO</a>
+              <a href="../Navbar/servico.aspx">SERVIÇO</a>
             </li>
             <li>
-              <a href="../Navbar/novidades.aspx" target="_blank">NOVIDADES</a>
+              <a href="../Navbar/novidades.aspx">NOVIDADES</a>
             </li>
             <li>
-              <a href="../Navbar/galeria.aspx" target="_blank">GALERIA</a>
+              <a href="../Navbar/galeria.aspx">GALERIA</a>
             </li>
             <li>
-              <a href="../Navbar/contato.aspx" target="_blank">CONTATO</a>
+              <a href="../Navbar/contato.aspx">CONTATO</a>
             </li>
           </ul>
         </div>
