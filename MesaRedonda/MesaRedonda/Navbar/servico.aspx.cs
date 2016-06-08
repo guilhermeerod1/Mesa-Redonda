@@ -2,6 +2,7 @@
 using DL;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -12,28 +13,21 @@ namespace MesaRedonda.Navbar
 {
     public partial class servico : System.Web.UI.Page
     {
+        private string urlAdministrativo = ConfigurationManager.AppSettings["URL"];
+
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {            
 
             ServicoBO bo = new ServicoBO();
-
-            string id = Request.QueryString["id"];
-
-            if (!string.IsNullOrEmpty(id))
-                bo.Remover(Convert.ToInt32(id));
-
+                        
             List<Servico> Servicos = bo.Listar();
 
-            int numeroServicos = Servicos.Count;
-
-            StringBuilder sb = new StringBuilder();
-
-            if (numeroServicos > 0)
-            {
-                sb.Append("Servicos cadastrados: ").Append(numeroServicos);
+            if (Servicos.Count > 0)
+            {            
                 rptServicos.DataSource = Servicos;
                 rptServicos.DataBind();
             }
+
         }
 
         protected void rptServicos_ItemDataBound
@@ -59,23 +53,15 @@ namespace MesaRedonda.Navbar
                 string url;
 
                 if (p.Imagem != null)
-                    url = p.Imagem.Caminho;
+                    url = urlAdministrativo + p.Imagem.Caminho.Substring(1);
                 else
-                    url = "~/Imagens/padrao.png";
+                    url = urlAdministrativo + "/Imagens/padrao.png";
 
                 ((Image)e.Item.FindControl("imgFotoServico"))
                     .ImageUrl = url;
 
                 ((Label)e.Item.FindControl("lblDescricao"))
-                    .Text = p.Descricao;
-
-                int id = p.IdServico;
-
-                ((HyperLink)e.Item.FindControl("lnkRemover"))
-                    .NavigateUrl = "~/Servicos/Servicos.aspx?id=" + id;
-
-                ((HyperLink)e.Item.FindControl("lnkEditar"))
-                    .NavigateUrl = "~/Servicos/EdicaoServico.aspx?id=" + id;
+                    .Text = p.Descricao;                
 
             }
         }
