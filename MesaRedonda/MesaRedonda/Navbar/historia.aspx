@@ -11,6 +11,7 @@
         </div>
       </div>
     </div>
+    <br />
     <div class="section">
       <div class="container">
         <div class="row">
@@ -28,21 +29,22 @@
               anos. Foi ali, a partir de uma casa modesta e um cardápio simples, que
               se iniciou a grande trajetória da Mesa Redonda, hoje uma referencia não
               só do segmento de pizza, como também da própria cidade. Hoje a Mesa Redonda
-              é um verdadeiro laboratório gastronômico. Dentre as criações mais recentes
-              são destaques: Por tudo isso, a Mesa Redonda é sinônimo de qualidade e
+              é um verdadeiro laboratório gastronômico. Por tudo isso, a Mesa Redonda é sinônimo de qualidade e
               muito sabor. Agora é sua vez de provar e fazer parte desta deliciosa história!</p>
           </div>
         </div>
       </div>
     </div>
+    <br />
+    <br />
     <div class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="../Imgs/historia1.jpg" class="center-block img-responsive img-thumbnail" style="height: 200px; width: 250px">
+            <img src="../Imgs/historia1.jpg" class="center-block img-responsive img-thumbnail" style="height: 300px; width: 412px">
           </div>
           <div class="col-md-6">
-            <img src="../Imgs/historia3.jpg" class="center-block img-responsive img-thumbnail" style="height: 200px; width: 250px">
+            <img src="../Imgs/historia3.jpg" class="center-block img-responsive img-thumbnail" style="height: 300px; width: 412px">
           </div>
         </div>
       </div>
