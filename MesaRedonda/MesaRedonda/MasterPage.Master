@@ -2,62 +2,60 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-      <title></title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
-    <!-- include summernote css/js-->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
-      <asp:ContentPlaceHolder ID="head" runat="server">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- JQuery e bootstrap -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/bootstrap.min.css") %>" type="text/css" />
+    <script src='<%= ResolveUrl("~/Scripts/jquery-1.9.1.min.js") %>'></script>
+    <script src='<%= ResolveUrl("/Scripts/bootstrap.min.js") %>'></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-  <meta name="description" content="The description of my page" />
+    <meta name="description" content="The description of my page" />
 </head>
-  <body style="background-image:url('../Imgs/background6.jpg')">
-    <div style="width:100%; background-color:white"><img src="../Imgs/LogoFactory.jpg" style="height: 127px; width: 151px"></div>
+<body style="background-image: url('../Imgs/background6.jpg')">
+    <div style="width: 100%; background-color: white">
+        <img src="../Imgs/LogoFactory.jpg" style="height: 127px; width: 151px"></div>
     <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="<%= ResolveUrl("~/HomePage.aspx") %>">HOME</a>
+                    </li>
+                    <li>
+                        <a href="../Navbar/historia.aspx">HISTÓRIA</a>
+                    </li>
+                    <li>
+                        <a href="../Navbar/cardapio.aspx">CARDÁPIO</a>
+                    </li>
+                    <li>
+                        <a href="../Navbar/servico.aspx">SERVIÇO</a>
+                    </li>
+                    <li>
+                        <a href="../Navbar/novidades.aspx">NOVIDADES</a>
+                    </li>
+                    <li>
+                        <a href="../Navbar/galeria.aspx">GALERIA</a>
+                    </li>
+                    <li>
+                        <a href="../Navbar/contato.aspx">CONTATO</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="HomePage.aspx">HOME</a>
-            </li>
-            <li>
-              <a href="../Navbar/historia.aspx">HISTÓRIA</a>
-            </li>
-            <li>
-              <a href="../Navbar/cardapio.aspx">CARDÁPIO</a>
-            </li>
-            <li>
-              <a href="../Navbar/servico.aspx">SERVIÇO</a>
-            </li>
-            <li>
-              <a href="../Navbar/novidades.aspx">NOVIDADES</a>
-            </li>
-            <li>
-              <a href="../Navbar/galeria.aspx">GALERIA</a>
-            </li>
-            <li>
-              <a href="../Navbar/contato.aspx">CONTATO</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-  </body>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
 </html>
-        
+

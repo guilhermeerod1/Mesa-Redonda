@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="contato.aspx.cs" Inherits="MesaRedonda.Navbar.contato" %>
+﻿<%@ Page Title="Contato" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="contato.aspx.cs" Inherits="MesaRedonda.Navbar.contato" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

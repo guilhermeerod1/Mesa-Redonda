@@ -2,6 +2,7 @@
 using DL;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -12,25 +13,18 @@ namespace MesaRedonda.Navbar
 {
     public partial class cardapio : System.Web.UI.Page
     {
+
+        private string administrativoUrl = ConfigurationManager.AppSettings["URL"];
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
             ProdutoBO bo = new ProdutoBO();
-
-            string id = Request.QueryString["id"];
-
-            if (!string.IsNullOrEmpty(id))
-                bo.Remover(Convert.ToInt32(id));
-
+            
             List<Produto> produtos = bo.Listar();
-
-            int numeroProdutos = produtos.Count;
-
-            StringBuilder sb = new StringBuilder();
-
-            if (numeroProdutos > 0)
+            
+            if (produtos.Count > 0)
             {
-                sb.Append("Produtos cadastrados: ").Append(numeroProdutos);
                 rptProdutos.DataSource = produtos;
                 rptProdutos.DataBind();
             }
@@ -60,23 +54,15 @@ namespace MesaRedonda.Navbar
                 string url;
 
                 if (p.Imagem != null)
-                    url = p.Imagem.Caminho;
+                    url = administrativoUrl + p.Imagem.Caminho.Substring(1);
                 else
-                    url = "~/Imagens/padrao.png";
+                    url = administrativoUrl + "/Imagens/padrao.png";
 
                 ((Image)e.Item.FindControl("imgFotoProduto"))
                     .ImageUrl = url;
 
                 ((Label)e.Item.FindControl("lblDescricao"))
-                    .Text = p.Descricao;
-
-                int id = p.IdProduto;
-
-                ((HyperLink)e.Item.FindControl("lnkRemover"))
-                    .NavigateUrl = "~/Produtos/Produtos.aspx?id=" + id;
-
-                ((HyperLink)e.Item.FindControl("lnkEditar"))
-                    .NavigateUrl = "~/Produtos/EdicaoProduto.aspx?id=" + id;
+                    .Text = p.Descricao;                
 
             }
         }

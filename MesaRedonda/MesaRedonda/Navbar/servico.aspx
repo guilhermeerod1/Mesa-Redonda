@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="servico.aspx.cs" Inherits="MesaRedonda.Navbar.servico" %>
+﻿<%@ Page Title="Serviço" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="servico.aspx.cs" Inherits="MesaRedonda.Navbar.servico" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 style="text-align:center;">Serviços</h1>
     <div class="container">
         <asp:Repeater ID="rptServicos" runat="server" OnItemDataBound="rptServicos_ItemDataBound">
             <ItemTemplate>
