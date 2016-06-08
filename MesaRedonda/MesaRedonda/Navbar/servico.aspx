@@ -20,13 +20,13 @@
               <br>
               <br>- Delivery, utilizando uma pequena caixa que pode ser recarregada energia
               e a cada três minutos dispara um choque a uma temperatura de 80ºC. A pizza
-              chegará quentinha na sua casa com a mesma qualidade da pizzaria.&nbsp;
+              chegará quentinha na sua casa com a mesma qualidade da pizzaria.
               <br>
-              <br>- Fazemos pizza ao vivo na sua casa ou em festas.&nbsp;
+              <br>- Fazemos pizza ao vivo na sua casa ou em festas.
               <br>
-              <br>- Temos máquina de espalhar molho no disco da pizza.&nbsp;
+              <br>- Temos máquina de espalhar molho no disco da pizza.
               <br>
-              <br>- Oferecemos o serviço de KIT aniversário, com pizzas em fatias,&nbsp;refrigerantes
+              <br>- Oferecemos o serviço de KIT aniversário, com pizzas em fatias, refrigerantes
               e copos descartáveis.</p>
           </div>
         </div>
