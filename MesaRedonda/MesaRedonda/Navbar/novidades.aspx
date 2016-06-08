@@ -20,6 +20,8 @@
             <img src="../Imgs/prototipo-mobile2.jpg" />
           </div>
           <div class="col-md-4">
+              <br />
+              <br />
             <ul class="lead list-group text-justify">
               <li class="list-group-item">Escolher um garçom livre através do aplicativo</li>
               <li class="list-group-item">Pedido feito por apenas 3 toques</li>
