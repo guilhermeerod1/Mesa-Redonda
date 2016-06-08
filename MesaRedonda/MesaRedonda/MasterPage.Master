@@ -17,7 +17,7 @@
   <meta name="description" content="The description of my page" />
 </head>
   <body style="background-image:url('../Imgs/background6.jpg')">
-    <div style="width:100%; background-color:white"><img src="../Imgs/LogoFactory.jpg" style="height: 127px; width: 151px"></div>
+    <div style="width:100%; background-color:white; text-align:center"><a href="<%=ResolveUrl("~/HomePage.aspx") %>"><img src="../Imgs/LogoFactory.jpg" style="height: 127px; width: 151px"></a></div>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">

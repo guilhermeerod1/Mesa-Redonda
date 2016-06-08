@@ -46,3 +46,9 @@ C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\DAL.dll
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\BLL.pdb
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\DL.pdb
 C:\Users\guilh\Documents\GitHub\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\DAL.pdb
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\BLL.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\DL.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\DAL.dll
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\BLL.pdb
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\DL.pdb
+C:\Users\Felipe\Documents\Visual Studio 2015\Projects\MesaRedonda\Mesa-Redonda\MesaRedonda\MesaRedonda\bin\DAL.pdb
